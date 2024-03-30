@@ -1,0 +1,49 @@
+import turtle
+
+# Set up the screen
+screen = turtle.Screen()
+screen.setup(width=800, height=600)
+screen.bgcolor("skyblue")
+
+# Create a turtle for drawing
+t = turtle.Turtle()
+t.speed(5)
+
+# Draw the horse
+def draw_horse():
+    t.penup()
+    t.goto(-50, -100)
+    t.pendown()
+    t.color("brown")
+    t.begin_fill()
+    t.circle(50)
+    t.end_fill()
+
+# Draw the man
+def draw_man():
+    t.penup()
+    t.goto(0, -50)
+    t.pendown()
+    t.color("blue")
+    t.begin_fill()
+    t.circle(30)
+    t.end_fill()
+    t.penup()
+    t.goto(0, -20)
+    t.pendown()
+    t.color("black")
+    t.width(5)
+    t.goto(0, 20)
+    t.goto(20, 0)
+    t.goto(-20, 0)
+    t.goto(0, 20)
+
+# Draw the picture
+draw_horse()
+draw_man()
+
+# Hide the turtle
+t.hideturtle()
+
+# Keep the window open
+turtle.done()
